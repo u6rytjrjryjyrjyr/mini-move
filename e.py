@@ -13,7 +13,22 @@ def yes_no(question):
         
         else:
              print("plesse enter yes or no")
+
+
+
+
 MAX_TICKETS = 3
+
+want_instructions = yes_no("Do you want to read the instruction? ")
+
+if want_instructions == "yes":
+    print('instuctions go here') 
+
+        
+print("progran continues... ")
+print()
+
+
 tickets_sold = 0
 while tickets_sold < MAX_TICKETS:
     name = input("please enter your name or 'xxx' to quit: ")
