@@ -19,12 +19,25 @@ while True:
 
 while True:
 
-    item = input("what is the first item you want to compare? ")
+    item1 = input("what is the first item you want to compare? ")
+    price1 = int(input("what is the price: "))
+    
     item2 = input("what is the second item you want to compare? ")
+    price2 = int(input("what is the price: "))
+    
     item3 = input("what is the third item you want to compare? ")
+    price3 = int(input("what is the price: ")) 
+   
     item4 = input("what is the forth item you want to compare? ") 
+    price4 = int(input("what is the price: "))
+    
     item5 = input("what it the fifth item you want to compare? ")    
+    price5 = int(input("what is the price: "))
+   
     item6 = input("what it the sixth item you want to compare? ")
+    price6 = int(input("what is the price: "))
+    
+
 
 
 
