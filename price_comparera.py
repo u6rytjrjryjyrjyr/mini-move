@@ -37,6 +37,13 @@ while True:
     item6 = input("what it the sixth item you want to compare? ")
     price6 = int(input("what is the price: "))
     
+    break
+
+ 
+print(item1 ,price1)
+print(item2, price2)
+
+
 
 
 
