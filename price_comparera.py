@@ -39,7 +39,7 @@ while True:
     
     break
 
-all_prices = [price1, price2 , price3 , price4 , price5 , price6]
+all_prices = [price1 , price2 , price3 , price4 , price5 , price6]
 
 all_prices.remove()
 
