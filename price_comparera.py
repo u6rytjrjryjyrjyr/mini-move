@@ -39,11 +39,13 @@ while True:
     
     break
 
- 
-print(item1 ,price1)
-print(item2, price2)
+all_prices = [price1, price2 , price3 , price4 , price5 , price6]
+
+all_prices.remove()
 
 
+
+print("this is the cheapest one")
 
 
 
