@@ -1,4 +1,4 @@
-#
+#starting text for the programe.
 print ("Wecome to the Price Comparison Tool "
        "what do you want to compare.")
 
@@ -16,7 +16,7 @@ while True:
 
 
 
-
+#user in put for the pirce checker.
 while True:
 
     item1 = input("what is the first item you want to compare? ")
@@ -38,12 +38,32 @@ while True:
     price6 = int(input("what is the price: "))
     
     break
+# this code checks for the chepiest price.
+all_prices = [ ]
 
-all_prices = [price1 , price2 , price3 , price4 , price5 , price6]
+all_items = [ ]
 
-all_prices.remove()
+all_prices.append(price1,price2,price3,price4,price5,price6)
 
+all_items.append(item1,item2,item3,item4,item5,item6)
 
+def price(e):
+  return e['lowest price']
+
+all_prices = [ ]
+
+all_prices.sort( reverse=True ,Key=price)
+
+print(all_prices)
+
+def price(e):
+  return e['lowest price']
+
+all_item = [ ]
+
+all_item.sort( reverse=True ,Key=price)
+
+print(all_prices)
 
 print("this is the cheapest one")
 
