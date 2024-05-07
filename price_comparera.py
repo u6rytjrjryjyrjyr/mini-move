@@ -11,49 +11,47 @@ while True:
           "you want to compare can not all be put in at once they have to be spaced out "
           "other wise it will not work properly basically. ")
     break
- else:
-  break
+ elif instructions == "no":
+    break
 
+else: 
+   print()
 
 
 #user in put for the pirce checker.
-while True:
-  all_prices = [ ]
-  item1 = input("what is the first item and price you want to compare? ")
-  item1 = list(map(int, input().split()))
+ 
+number = int(input("how many number of items do you what to compare: "))
 
-  all_prices.sort()
-   
-  item2 = input("what is the second item and price you want to compare? ")
-  item2 = list(map(int, input().split()))
+all_items = []
 
-  all_prices.sort() 
+all_prices = []
+for i in range(number):
+
     
-  item3 = input("what is the third item and price you want to compare? ")
-  item3 = list(map(int, input().split()))
+    item1 = input("what is the name of the item you want to compare? ")
+    price1 = int(input("what is the price of the item you what to compare? "))
+    all_prices.append(price1)
+    all_items.append(item1)
+    break
 
-  all_prices.sort()
-   
-  item4 = input("what is the forth item and price you want to compare? ") 
-  item4 = list(map(int, input().split()))
 
-  all_prices.sort()
     
-  item5 = input("what it the fifth item and price you want to compare? ")    
-  item5 = list(map(int, input().split()))
-
-  all_prices.sort()
-   
-  item6 = input("what it the sixth item and price you want to compare? ")
-  item6 = list(map(int, input().split()))
-
-  all_prices.sort()
-    
-  break
 # this code checks for the chepiest price.
+
+all_prices = []
+mini = all_prices[0]
+
+for i in range(len(all_prices)):
+  if all_prices[i] < mini:
+     mini = all_prices[i]
+
+print (mini)
+
 
 
 print(all_prices)
+
+
 
 print("this is the cheapest one")
 
