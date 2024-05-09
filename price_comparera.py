@@ -25,12 +25,13 @@ number = int(input("how many number of items do you what to compare: "))
 all_items = []
 
 all_prices = []
+
 for i in range(number):
 
     
     item1 = input("what is the name of the item you want to compare? ")
     price1 = int(input("what is the price of the item you what to compare? "))
-    all_prices.append(price1)
+    all_prices.insert(1, price1)
     all_items.append(item1)
     break
 
@@ -39,14 +40,8 @@ for i in range(number):
 # this code checks for the chepiest price.
 
 all_prices = []
-mini = all_prices[0]
 
-for i in range(len(all_prices)):
-  if all_prices[i] < mini:
-     mini = all_prices[i]
-
-print (mini)
-
+print (min(all_prices))
 
 
 print(all_prices)
