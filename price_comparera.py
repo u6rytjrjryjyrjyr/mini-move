@@ -31,20 +31,25 @@ for i in range(number):
     
     item1 = input("what is the name of the item you want to compare? ")
     price1 = int(input("what is the price of the item you what to compare? "))
-    all_prices.insert(1, price1)
+    all_prices.append(price1)
     all_items.append(item1)
-    break
+    
 
 
     
 # this code checks for the chepiest price.
 
-all_prices = []
 
-print (min(all_prices))
+smallest_number = min(all_prices)
 
+def smallest_number(all_prices):
+    smallest_number = all_prices[0]
+    for item in all_prices:
+      if smallest_number > item:
+        smallest_number = item
+      return smallest_number
 
-print(all_prices)
+print(smallest_number)
 
 
 
