@@ -8,7 +8,7 @@ while True:
  if instructions == "yes":
     print("In this programme for it to work you will have to put in all of the things "
           "you want to compare can not all be put in at once they have to be spaced out "
-          "other wise it will not work properly basically. ")
+          "other wise it will not work properly basically and number the inputs them. ")
     break
  elif instructions == "no":
     break
@@ -20,33 +20,62 @@ else:
 #user in put for the pirce checker.
  
 number = int(input("how many number of items do you what to compare: "))
-
+price_item_weight = []
 all_items = []
-
 all_prices = []
-
+all_things = []
+all_weight = []
+smallest_number = []
 for i in range(number): 
-    item1 = input("what is the name of the item you want to compare? ")
-    price1 = int(input("what is the price of the item you what to compare? "))
+    item1 = input("what is the name of the {} item you want to compare? ".format(number))
+    price1 = float(input("what is the price of the {} item you what to compare? ".format(number)))
+    weight = float(input("what is the weight of the {} item you what to compare? ".format(number)))
     all_prices.append(price1)
     all_items.append(item1)
-    
+    all_weight.append(weight)
+    price_item_weight.append(all_prices)
+    price_item_weight.append(all_items)
+    price_item_weight.append(all_weight)
+   
 
 
-    
+
+
+
+
+
+
+
+
+price_item_weight.append([])  
+price_item_weight.append(all_prices)
+price_item_weight.append(all_items)
+price_item_weight.append(all_weight)
+
+
+
+
+
+
+
+
 # this code checks for the chepiest price.
 
 
-price_number = min(all_prices)
+price_number = min(smallest_number)
 
-def smallest_number(all_prices):
-    price_number = all_prices[0]
-    for item in all_prices:
+def small_number(smallest_number):
+    price_number = smallest_number[0]
+    for item in smallest_number:
       if price_number > item:
         price_number = item
       return price_number
-print(all_items)
-print(price_number)
+
+
+print (price_item_weight)
+
+
+
 
 
 
