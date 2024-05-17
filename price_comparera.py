@@ -4,7 +4,7 @@ print ("Wecome to the Price Comparison Tool "
 
 
 while True:
- instructions = input("Do you want the instructions? ").lower
+ instructions = input("Do you want the instructions? ")
  if instructions == "yes":
     print("In this programme for it to work you will have to put in all of the things "
           "you want to compare can not all be put in at once they have to be spaced out "
@@ -26,6 +26,8 @@ all_prices = []
 all_things = []
 all_weight = []
 smallest_number = []
+weight_price = []
+
 for i in range(number): 
     item1 = input("what is the name of the {} item you want to compare? ".format(number))
     price1 = float(input("what is the price of the {} item you what to compare? ".format(number)))
@@ -36,8 +38,8 @@ for i in range(number):
     price_item_weight.append(all_prices)
     price_item_weight.append(all_items)
     price_item_weight.append(all_weight)
-   
-
+    key = input(number)
+    
 
 
 
@@ -72,10 +74,10 @@ def small_number(smallest_number):
       return price_number
 
 
-print (price_item_weight)
+print(price_item_weight)
 
 
-
+print()
 
 
 
