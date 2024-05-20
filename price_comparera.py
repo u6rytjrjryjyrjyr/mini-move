@@ -29,21 +29,21 @@ smallest_number = []
 weight_price = []
 
 for i in range(number): 
-    item1 = input("what is the name of the {} item you want to compare? ".format(number))
-    price1 = float(input("what is the price of the {} item you what to compare? ".format(number)))
-    weight = float(input("what is the weight of the {} item you what to compare? ".format(number)))
+    item1 = input("what is the name of the {} item you want to compare? ".format(i))
+    price1 = float(input("what is the price of the {} item you what to compare? ".format(i)))
+    weight = float(input("what is the weight of the {} item you what to compare? ".format(i)))
     all_prices.append(price1)
     all_items.append(item1)
     all_weight.append(weight)
     price_item_weight.append(all_prices)
     price_item_weight.append(all_items)
     price_item_weight.append(all_weight)
-    key = input(number)
+    
     
 
 
 
-
+price_per_weight = [price / weight for price, weight in zip(all_prices, all_weight)]
 
 
 
@@ -54,7 +54,7 @@ price_item_weight.append(all_prices)
 price_item_weight.append(all_items)
 price_item_weight.append(all_weight)
 
-
+cheapest_things = price_per_weight.index(min(price_per_weight))
 
 
 
@@ -74,16 +74,11 @@ def small_number(smallest_number):
       return price_number
 
 
-print(price_item_weight)
 
-
-print()
-
-
-
-print("this is the cheapest one")
-
-
+print(f"Item: {all_items[cheapest_things]}")
+print(f"Price: {all_prices[cheapest_things]}")
+print(f"Weight: {all_weight[cheapest_things]}")
+print(f"Price per weight: {price_per_weight[cheapest_things]:.2f}")
 
 
 
