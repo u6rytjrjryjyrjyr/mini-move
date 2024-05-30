@@ -14,7 +14,7 @@ while True:
     break
 
 else: 
-   print("please ")
+   print("please use yes or no please. ")
 
 
 #user in put for the pirce checker.
@@ -42,7 +42,7 @@ for i in range(number):
     
 
 
-
+# calaulates price / weight
 price_per_weight = [price / weight for price, weight in zip(all_prices, all_weight)]
 
 
@@ -61,19 +61,11 @@ cheapest_things = price_per_weight.index(min(price_per_weight))
 
 
 
-# this code checks for the chepiest price.
 
 
-price_number = min(smallest_number)
-
-def small_number(smallest_number):
-    price_number = smallest_number[0]
-    for item in smallest_number:
-      if price_number > item:
-        price_number = item
-      return price_number
 
 
+# this code tells the cheapest price 
 
 print(f"Item: {all_items[cheapest_things]}")
 print(f"Price: {all_prices[cheapest_things]}")
