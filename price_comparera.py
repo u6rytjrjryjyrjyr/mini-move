@@ -2,6 +2,17 @@
 # Coder: Max Allison.
 # V 03.5.
 # Starting text for the programe.
+number_of_items=0
+# Lists for information and input to be stored.
+price_item_weight = []
+all_items = []
+all_prices = []
+all_things = []
+all_weight = []
+smallest_number = []
+weight_price = []
+compare=50
+
 print("Wecome to the Price Comparison Tool "
       "what do you want to compare.")
 
@@ -22,22 +33,15 @@ while True:
    print("please use yes or no please. ")
       
 # User input for how many items the user want to compare.
- while True:
-    try:
-       number_of_items = int(input("how many number of items"
-                              " do you what to compare: "))
-       break
-    except ValueError:
-         print("please use a number.")
-       
-# Lists for information and input to be stored.
-price_item_weight = []
-all_items = []
-all_prices = []
-all_things = []
-all_weight = []
-smallest_number = []
-weight_price = []
+for i in range(compare):
+   number_of_items = int(input("how many number of items"
+                               " do you what to compare: "))
+   if number_of_items.isdigit():
+      number_of_items = int(number_of_items)
+      continue
+   else:
+    compare=0
+
 # For in loop for looping the code in side.
 # And the code put all of the user inputs in to the arrays.
 for i in range(number_of_items):
