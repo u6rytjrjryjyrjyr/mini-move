@@ -33,38 +33,45 @@ while True:
    print("please use yes or no please. ")
       
 # User input for how many items the user want to compare.
-for i in range(compare):
-   number_of_items = int(input("how many number of items"
-                               " do you what to compare: "))
+while True:
+   number_of_items = input("how many number of items"
+                               " do you what to compare: ")
+   
    if number_of_items.isdigit():
       number_of_items = int(number_of_items)
-      continue
-   else:
-    compare=0
+      break
+
 
 # For in loop for looping the code in side.
 # And the code put all of the user inputs in to the arrays.
 for i in range(number_of_items):
+   
     item1 = input("what is the name of the {} item you"
-                  " want to compare? ".format(i))
-    price1 = float(input("what is the price of the {} item you"
-                         " what to compare? ".format(i)))
-    weight = float(input("what is the weight of the {} item "
-                         "you what to compare? ".format(i)))
-    if weight.is_integer():
-     weight = float(weight)
-     continue
-    else:
-      if item_input.isdigit():
-       item_input = input(item_input)
-       continue
+                     " want to compare? ".format(i))
+
+    
+    while True:
+      weight = input("what is the weight of the {} item "
+                         "you what to compare? ".format(i))
+    
+      if weight.isdigit():
+         weight = float(weight)
+         break
+
+    while True:
+      price1 = input("what is the price of the {} item you"
+                         " what to compare? ".format(i))
+      if price1.isdigit():
+        price1 = float(price1)
+        break
+
     all_prices.append(price1)
     all_items.append(item1)
     all_weight.append(weight)
     price_item_weight.append(all_prices)
     price_item_weight.append(all_items)
     price_item_weight.append(all_weight)
-
+       
 # Calaulates price / weight then stores it in
 # the list price_per_weight.
 price_per_weight = [price / weight for price, weight
